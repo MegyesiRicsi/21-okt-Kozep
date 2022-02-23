@@ -43,7 +43,7 @@ gyoztesek[41]="Valter Attila (HUN),18:45:55;Simmons Quinn (USA),+12 mp;Howson Da
 
 function listaelem(eredmeny){
   if (eredmeny.includes("(HUN)")) {
-    return "<em><b>"+eredmeny.replace(",","<br>")+"</em></b>";
+    return "<b>"+eredmeny.replace(",","<br>")+"</b>";
   } 
   else
   {
@@ -56,4 +56,6 @@ function frissit(){
     document.getElementById('hely1').innerHTML = listaelem(gyoztesek[sorsz].split(";")[0]); 
     document.getElementById('hely2').innerHTML = listaelem(gyoztesek[sorsz].split(";")[1]); 
     document.getElementById('hely3').innerHTML = listaelem(gyoztesek[sorsz].split(";")[2]); 
-}
+	document.getElementById('sorszam').innerHTML = listaelem(gyoztesek[sorsz].split(";")[3]); 
+
+}	
